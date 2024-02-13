@@ -1,0 +1,52 @@
+{
+  "name": "single-instance-component",
+  "version": "1.0.0",
+  "description": ".",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itaym/SingleInstanceComponent.git"
+  },
+  "keywords": [
+    "React",
+    "instance",
+    "component",
+    "utility",
+    "props",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "author": "Itay Merchav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itaym/SingleInstanceComponent/issues"
+  },
+  "homepage": "https://github.com/itaym/SingleInstanceComponent#readme",
+  "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^25.2.1",
+    "@types/react": "^16.14.21",
+    "@types/react-dom": "^16.9.14",
+    "jest": "^26.0.1",
+    "prettier": "^2.5.1",
+    "ts-jest": "^25.5.1",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {}
+}
